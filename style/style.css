@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
+:root{
+    --cor-primaria: #f06;
+    --texto: #fff;
+    --bg-padrao: #111;
+    --bg-destaue: #2d2d2d;
+    --font: 'Roboto', san-serif;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--bg-padrao);
+    font-family: var(--font);
+}
+
+header{
+    display: flex;
+    background-color: var(--bg-destaue);
+}
+
+header span{
+    color: var(--cor-primaria);
+    padding-top: 15px;
+    font-size: 58px;
+}
+
+
+#titulo{
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.8rem;
+}
+
+nav{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+nav ul{
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+}
+
+nav li{
+    list-style: none;
+    margin: .6rem ;
+}
+
+nav li:last-child {
+    flex-grow: 1;
+    text-align: end;
+}
+
+a{
+    color: var(--texto);
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#hero{
+    height: 12.5rem;
+    width: 100%;
+    position: relative;
+}
+
+#hero::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url(https://www.themoviedb.org/t/p/original/nvMoOlC7HHZ9U4WknwwGOVefvnI.jpg);
+    position: absolute;
+    background-size: cover;
+    /*background-position-y: -100px;*/
+    z-index: -1;
+    filter: opacity(.6);
+    box-shadow: inset 0 -100px 100px var(--bg-padrao);
+}
+
+#hero p{
+    padding: 2rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 44px;
+    color: var(--texto);
+    text-shadow: 0px 4px 4px var(--bg-padrao);
+}
+
+
+h2{
+    color: var(--texto);
+    border-left:  var(--cor-primaria) 5px solid;
+    padding-left: 4px ;
+}
+
+.secao-filmes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-destaue);
+    width: 120px;
+    border-radius: 6px;
+    margin: .8rem;
+}
+
+.cards img{
+    border-radius: 6px;
+    width: 120px;
+}
+
+.botao{
+    background-color: var(--cor-primaria);
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin: 0 .7rem;
+    transition: box-shadow .5s ease-in-out;
+}
+
+.botao:hover{
+    box-shadow: 0 0 10px #fff;
+}
+
+.cards p{
+    margin: .3rem 0;
+    color: var(--texto)
+}
+
+.cards .nota{
+    display: flex;
+    align-items: center;
+    color: var(--texto);
+    justify-content: center;
+}
+
+.cards .estrela{
+    color: gold;
+}
+
+@media (max-width: 425px) {
+    header{
+        flex-direction: column;
+    }
+}
+

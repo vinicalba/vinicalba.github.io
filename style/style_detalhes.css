@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
+:root{
+    --cor-primaria: #f06;
+    --texto: #fff;
+    --bg-padrao: #111;
+    --bg-destaue: #2d2d2d;
+    --font: 'Roboto', san-serif;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--bg-padrao);
+    font-family: var(--font);
+}
+
+header{
+    display: flex;
+    background-color: var(--bg-destaue);
+}
+
+header span{
+    color: var(--cor-primaria);
+    padding-top: 15px;
+}
+
+#titulo{
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.8rem;
+}
+
+nav{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+nav ul{
+    display: flex;
+    flex: 1;
+    align-items: flex-end
+}
+
+nav li{
+    list-style: none;
+    margin: .6rem ;
+}
+
+nav li:last-child {
+    flex-grow: 1;
+    text-align: end;
+}
+
+a{
+    color: var(--texto);
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#detalhes{
+    height: 12.5rem;
+    width: 96%;
+    position: relative;
+}
+
+#detalhes::before{
+    content: '';
+    height: 282%;
+    width: 104%;
+    background-image: url(https://br.web.img3.acsta.net/r_1280_720/newsv7/21/08/11/21/44/3578238.jpg);
+    position: absolute;
+    background-size: cover;
+    /*background-position-y: -100px;*/
+    z-index: -1;
+    filter: opacity(.6);
+    box-shadow: inset 0 -100px 127px var(--bg-padrao);
+}
+
+#poster{
+    position: absolute;
+    width: 300px;
+    height: 450px;
+    left: 46px;
+    top: 46px;
+    border-radius: 8px;
+
+}
+
+#peaky{
+    position: absolute;
+    left: 446px;
+    top: 46px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.04em;
+    color: var(--texto);
+
+}
+
+#texts{
+    position: absolute;
+    max-width: 900px;
+    height: 155px;
+    left: 446px;
+    top: 186px;
+    color: #CCCCCC;
+    font-size: larger;
+    font-family: var(--font);
+    font-weight: bold;
+    line-height: 25px;
+
+}
+a{
+    top: 358px;
+    left: 46px;
+}
+
+.botao{
+    background-color: var(--cor-primaria);
+    padding: 5px 30px;
+    border-radius: 5px;
+    margin: 0 .7rem;
+    transition: box-shadow .5s ease-in-out;
+    position: relative;
+    font-family: var(--font);
+}
+
+.botao:hover{
+    box-shadow: 0 0 10px #fff;
+}
+
+#elenco{
+    color: var(--texto);
+    border-left:  var(--cor-primaria) 5px solid;
+    padding-left: 4px ;
+    position: relative;
+    top: 419px;
+    font-family: var(--font);
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-destaue);
+    width: 120px;
+    border-radius: 6px;
+    margin: .8rem;
+    height: 180px;
+    width: 190px;
+    position: relative;
+    top: 500px;
+    left: 50px;
+    display: inline-block;
+}
+
+.cards img{
+    height: 70%;
+    width: 70%;
+    border-radius: 50%;
+    margin: 27px;
+    margin-top: -72px;
+    box-shadow:  0px 0px 0px 5px white;
+}
+
+h3{
+    color: var(--texto);
+    text-align: center;
+    font-family: var(--font);
+}
+
+.cards p{
+    color: #8D8D8D;
+    text-align: center;
+    font-family: var(--font);
+    padding-top: 20px;
+}
+
+#ficha{
+    position: absolute;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-destaue);
+    border-radius: 6px;
+    margin: .8rem;
+    height: 475px;
+    width: 190px;
+    border-radius: 8px;
+}
+
+#ficha h2{
+    color: var(--texto);
+    border-left:  var(--cor-primaria) 5px solid;
+    padding-left: 4px ;
+    font-family: var(--font);
+    
+    
+}
+
+#ficha h3{
+    padding: 15px;
+    text-align: left;
+}
+
+#ficha p{
+    color: #8D8D8D;
+    
+    padding-left: 15px;
+}
+
+.site{
+    position: absolute;
+    left: 3px;
+}
